@@ -5,7 +5,7 @@ entries:
       category: Database
     apiVersion: v2
     appVersion: 4.0.1
-    created: "2022-01-20T11:29:35.357046113Z"
+    created: "2022-01-20T15:50:14.11924257Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -37,7 +37,26 @@ entries:
   jenkins:
   - apiVersion: v1
     appVersion: lts
-    created: "2022-01-20T11:29:35.364996754Z"
+    created: "2022-01-20T15:50:14.145698968Z"
+    deprecated: true
+    description: DEPRECATED - Open source continuous integration server. It supports
+      multiple SCM tools including CVS, Subversion and Git. It can execute Apache
+      Ant and Apache Maven-based projects as well as arbitrary scripts.
+    digest: e80af5f50c63ec06e32e7d8aa0aa99a11f2213a62bdb1e87edc3fa2156d14cbd
+    home: https://jenkins.io/
+    icon: https://wiki.jenkins-ci.org/download/attachments/2916393/logo.png
+    name: jenkins
+    sources:
+    - https://github.com/jenkinsci/jenkins
+    - https://github.com/jenkinsci/docker-jnlp-slave
+    - https://github.com/maorfr/kube-tasks
+    - https://github.com/jenkinsci/configuration-as-code-plugin
+    urls:
+    - jenkins-2.5.5.tgz
+    version: 2.5.5
+  - apiVersion: v1
+    appVersion: lts
+    created: "2022-01-20T15:50:14.123761533Z"
     deprecated: true
     description: DEPRECATED - Open source continuous integration server. It supports
       multiple SCM tools including CVS, Subversion and Git. It can execute Apache
@@ -54,10 +73,55 @@ entries:
     urls:
     - jenkins-2.5.4.tgz
     version: 2.5.4
+  kong:
+  - annotations:
+      category: Infrastructure
+    apiVersion: v2
+    appVersion: 2.7.0
+    created: "2022-01-20T15:50:14.171907471Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.x.x
+    - condition: cassandra.enabled
+      name: cassandra
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.x.x
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    description: Kong is a scalable, open source API layer (aka API gateway or API
+      middleware) that runs in front of any RESTful API. Extra functionalities beyond
+      the core platform are extended through plugins. Kong is built on top of reliable
+      technologies like NGINX and provides an easy-to-use RESTful API to operate and
+      configure the system.
+    digest: 18251479d78671232212c5f6c67c2ae0ac32c2ebcc6a77e602eb47d0771f2eed
+    home: https://github.com/bitnami/charts/tree/master/bitnami/kong
+    icon: https://bitnami.com/assets/stacks/kong/img/kong-stack-220x234.png
+    keywords:
+    - kong
+    - ingress
+    - openresty
+    - controller
+    - http
+    - web
+    - www
+    - reverse proxy
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    name: kong
+    sources:
+    - https://github.com/bitnami/bitnami-docker-kong
+    - https://konghq.com/
+    urls:
+    - kong-5.0.2.tgz
+    version: 5.0.2
   mongodb:
   - apiVersion: v1
     appVersion: 4.2.4
-    created: "2022-01-20T11:29:35.368030462Z"
+    created: "2022-01-20T15:50:14.18418464Z"
     deprecated: true
     description: DEPRECATED NoSQL document-oriented database that stores JSON-like
       documents with dynamic schemas, simplifying the integration of data in content-driven
@@ -78,4 +142,4 @@ entries:
     urls:
     - mongodb-7.8.10.tgz
     version: 7.8.10
-generated: "2022-01-20T11:29:35.352378075Z"
+generated: "2022-01-20T15:50:14.090747388Z"
